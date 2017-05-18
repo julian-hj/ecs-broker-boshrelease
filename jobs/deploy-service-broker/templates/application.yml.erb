@@ -2,6 +2,7 @@ broker:
   management-endpoint: <%= properties.managementEndpoint %>
   namespace: <%= properties.namespace %>
   object-endpoint: <%= properties.objectEndpoint %>
+  nfs-mount-host: <%= properties.nfsMountHost %>
   repository-endpoint: <%= properties.repositoryEndpoint %>
   replication-group: <%= properties.replicationGroup %>
   repository-service-id: something
@@ -52,6 +53,8 @@ catalog:
       description: Elastic Cloud S3 Object Storage Bucket
       bindable: true
       plan-updatable: true
+      requires:
+      - volume_mount
       tags:
         - s3
         - bucket

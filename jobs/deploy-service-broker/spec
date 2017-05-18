@@ -52,6 +52,8 @@ properties:
     decription: ECS Management Endpoint
   objectEndpoint:
     description: 'ECS Object Endpoint'
+  nfsMountHost:
+    description: '(optional) ECS Host address for NFS mounts.  If not specified, the hostname will be extracted from the object endpoint.'
   baseUrl:
     description: 'ECS Base URL'
   repositoryEndpoint:
