@@ -44,6 +44,7 @@ function authenticate_and_target() {
 }
 
 function register_broker() {
+  cf target -o $ORG -s $SPACE
   broker=`cf service-brokers | grep $BROKER_NAME || true`
   if [[ -z "$broker" ]]; then
     cf create-service-broker $BROKER_NAME $BROKER_USER $BROKER_PASS $BROKER_HOST
